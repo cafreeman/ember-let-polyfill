@@ -1,5 +1,5 @@
 // Support for 3.0 - 3.2
-const { registerMacros } = Ember.__loader.require('ember-glimmer');
+const { _registerMacros } = Ember.__loader.require('ember-glimmer');
 
 function blockLetMacro(params, _hash, template, _inverse, builder) {
   if (template !== null) {
@@ -13,6 +13,6 @@ function blockLetMacro(params, _hash, template, _inverse, builder) {
   return true;
 }
 
-registerMacros(blocks => {
+_registerMacros(blocks => {
   blocks.add('let', blockLetMacro);
 });
