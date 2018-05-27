@@ -61,6 +61,8 @@ module.exports = {
       version = 'ember-lt-2-15';
     } else if (emberVersion.lt('3.0.0-alpha.1')) {
       version = 'ember-lt-3-0';
+    } else if (emberVersion.lt('3.1.0-alpha.1')) {
+      version = 'ember-lt-3-1';
     } else if (emberVersion.lt('3.2.0-alpha.1')) {
       version = 'ember-lt-3-2';
     } else {
