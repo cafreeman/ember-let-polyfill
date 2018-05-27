@@ -1,17 +1,21 @@
 {
   "name": "ember-let-polyfill",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "A polyfill for the `let` helper in Ember < 3.2",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "polyfill",
+    "addon",
+    "let",
+    "ember-let"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Chris Freeman",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/cafreeman/ember-let-polyfill",
   "scripts": {
     "build": "ember build",
     "lint:js": "eslint ./*.js addon addon-test-support app blueprints config lib server test-support tests",
