@@ -15,4 +15,32 @@ module('Integration | Helper | block-let', function(hooks) {
 
     assert.equal(this.element.textContent.trim(), 'hello world');
   });
+
+  test('block let with hash works', async function(assert) {
+    await render(hbs`
+      {{#let (hash foo="foo" bar="bar") as |stuff|}}
+        <p>{{stuff.foo}}</p>
+        <p>{{stuff.bar}}</p>
+      {{/let}}
+    `);
+
+    let elements = this.element.getElementsByTagName('p');
+
+    assert.equal(elements[0].textContent.trim(), 'foo');
+    assert.equal(elements[1].textContent.trim(), 'bar');
+  });
+
+  test('block let with multiple outputs works', async function(assert) {
+    await render(hbs`
+      {{#let "foo" "bar" as |foo bar|}}
+        <p>{{foo}}</p>
+        <p>{{bar}}</p>
+      {{/let}}
+    `);
+
+    let elements = this.element.getElementsByTagName('p');
+
+    assert.equal(elements[0].textContent.trim(), 'foo');
+    assert.equal(elements[1].textContent.trim(), 'bar');
+  });
 });
