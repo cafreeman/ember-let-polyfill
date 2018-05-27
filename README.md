@@ -21,12 +21,16 @@ Usage
 ```
 
 Migration
-------------------------------------------------------------------------------
+==============================================================================
 
 Applications
+------------------------------------------------------------------------------
+
 After you upgrade your application to Ember 3.2, you should remove ember-let-polyfill from your package.json.
 
 Addons
+------------------------------------------------------------------------------
+
 Addons generally support many different Ember versions, so leaving ember-let-polyfill in place for consumers of your addon is perfectly normal. When the addon no longer supports Ember versions older than 3.2, we recommend removing ember-let-polyfill from your package.json and doing a major version bump.
 
 
