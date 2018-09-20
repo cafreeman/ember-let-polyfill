@@ -1,6 +1,6 @@
 {
   "name": "ember-let-polyfill",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A polyfill for the `let` helper in Ember < 3.2",
   "keywords": [
     "ember-addon",
