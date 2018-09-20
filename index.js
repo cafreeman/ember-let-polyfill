@@ -4,7 +4,7 @@ const VersionChecker = require('ember-cli-version-checker');
 let hasBeenWarned = false;
 
 module.exports = {
-  name: 'ember-let-polyfill',
+  name: require('./package').name,
 
   included() {
     this._super.included.apply(this, arguments);
